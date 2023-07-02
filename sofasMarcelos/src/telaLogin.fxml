@@ -4,16 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
    <children>
-      <Button fx:id="botaoLoginTela1" layoutX="295.0" layoutY="249.0" mnemonicParsing="false" text="Log-in" />
-      <Button fx:id="botaoCadastroTela1" layoutX="252.0" layoutY="282.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Cadastro (clientes)" />
-      <PasswordField fx:id="campoSenhaTela1" layoutX="246.0" layoutY="168.0" />
-      <TextField fx:id="campoEmailTela1" layoutX="246.0" layoutY="109.0" />
-      <Label layoutX="303.0" layoutY="134.0" text="e-mail" />
-      <Label layoutX="303.0" layoutY="193.0" text="senha" />
+      <Button fx:id="botaoLoginTela1" layoutX="347.0" layoutY="394.0" mnemonicParsing="false" onAction="#fazerLogin" text="Log-in" />
+      <Button fx:id="botaoCadastroTela1" layoutX="408.0" layoutY="394.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" text="Cadastro (clientes)" />
+      <PasswordField fx:id="campoSenhaTela1" layoutX="188.0" layoutY="394.0" />
+      <TextField fx:id="campoEmailTela1" layoutX="23.0" layoutY="394.0" />
+      <Label layoutX="23.0" layoutY="374.0" text="Usuário" />
+      <Label layoutX="188.0" layoutY="374.0" text="Senha" />
+      <Label layoutX="19.0" layoutY="321.0" text="Login">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="321.0" fitWidth="869.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logos/logo3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="136.0" layoutX="628.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logos/icone.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
