@@ -9,6 +9,14 @@
             "name": "App",
             "request": "launch",
             "mainClass": "App",
+            "projectName": "sofasMarcelos_13caae7c",
+            "vmArgs": "--module-path \"JavaFX/javafx-sdk-20.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
             "projectName": "sofasMarcelos_6bd7795a",
             "vmArgs": "--module-path \"JavaFX/javafx-sdk-20.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         },
@@ -16,7 +24,8 @@
             "type": "java",
             "name": "Current File",
             "request": "launch",
-            "mainClass": "${file}"
-        },
+            "mainClass": "${file}",
+            "vmArgs": "--module-path \"JavaFX/javafx-sdk-20.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
     ]
 }

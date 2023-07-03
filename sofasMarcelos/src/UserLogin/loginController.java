@@ -30,6 +30,8 @@ public class loginController {
 
         System.out.println(usuario);
         System.out.println(senha);
+
+        ConexaoDB.conectar();
     }
 
 }
