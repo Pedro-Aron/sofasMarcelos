@@ -28,10 +28,12 @@ public class loginController {
         String usuario = campo_usuario.getText();
         String senha = campo_senha.getText();
 
-        System.out.println(usuario);
-        System.out.println(senha);
+        String resultadoLogin; 
+        if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null)
+            System.out.println("login nao encontrado");
+        else 
+            System.out.println(resultadoLogin);
 
-        ConexaoDB.conectar();
     }
 
 }
