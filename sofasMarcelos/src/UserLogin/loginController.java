@@ -19,8 +19,8 @@ public class loginController {
     private TextField campo_usuario;
 
     @FXML
-    void cadastrar(ActionEvent event) {
-        
+    void cadastrar(ActionEvent event){
+        App.change_scene(1);
     }
 
     @FXML

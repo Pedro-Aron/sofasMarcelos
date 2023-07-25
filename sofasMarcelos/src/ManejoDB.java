@@ -6,10 +6,14 @@ import java.sql.SQLException;
 
 public class ManejoDB {
     private static Connection conexao;
+    static final String url = "jdbc:mysql://localhost:3306/cadastro"; 
+    static final String user = "root"; 
+    static final String password = "1234"; 
 
     public static boolean conectar() {
         try {
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost/sofasmarcelos?" + "user=root&password=Aerodoido365");
+            conexao = DriverManager.getConnection(url, user, password);
+            System.out.println("CONECTOU");
             return true;
         } catch (SQLException e) {
             System.out.println(e.getMessage() + "\n" + e.getErrorCode());
