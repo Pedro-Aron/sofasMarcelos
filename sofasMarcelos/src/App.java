@@ -24,8 +24,7 @@ public class App extends Application {
 
         final FXMLLoader telaCadastroXML = new FXMLLoader(getClass().getResource("telaCadastro.fxml")); 
         telaCadastroTela = new Scene(telaCadastroXML.load()); 
-
-        stage.setTitle("Log-in e cadastro");
+        
         stage.setScene(telaLoginTela);
         stage.show();
     }
@@ -35,6 +34,8 @@ public class App extends Application {
             case 1: 
                 stage.setScene(telaCadastroTela);
                 break;
+            case 2: 
+                stage.setScene(telaLoginTela); 
         }
     }
 }
