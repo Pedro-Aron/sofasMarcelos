@@ -45,15 +45,15 @@ public class ManejoDB {
     }
 
     public static void cadastrar_vendedor(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
-        String sql = "INSERT INTO vendedor values (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO vendedor values (?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement comandoVendedor = conexao.prepareStatement(sql);
-        comandoVendedor.setString(1, nome);
-        comandoVendedor.setString(2, cpf);
-        comandoVendedor.setString(3, rg);
-        comandoVendedor.setString(4, email);
-        comandoVendedor.setString(5, telefone);
-        comandoVendedor.setString(6, login);
-        comandoVendedor.setString(7, senha);
+        comandoVendedor.setString(2, nome);
+        comandoVendedor.setString(3, cpf);
+        comandoVendedor.setString(4, rg);
+        comandoVendedor.setString(5, email);
+        comandoVendedor.setString(6, telefone);
+        comandoVendedor.setString(7, login);
+        comandoVendedor.setString(8, senha);
         comandoVendedor.execute();
         System.out.println("Chegou aqui");
         comandoVendedor.close();
