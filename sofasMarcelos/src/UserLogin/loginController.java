@@ -20,7 +20,7 @@ public class loginController {
 
     @FXML
     void cadastrar(ActionEvent event){
-        App.change_scene(1);
+        App.change_scene("tela cadastro");
     }
 
     @FXML

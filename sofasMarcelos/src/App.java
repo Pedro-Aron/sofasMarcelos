@@ -29,12 +29,12 @@ public class App extends Application {
         stage.show();
     }
 
-    public static void change_scene(int codigo_tela){
+    public static void change_scene(String codigo_tela){
         switch (codigo_tela){
-            case 1: 
+            case "tela cadastro": 
                 stage.setScene(telaCadastroTela);
                 break;
-            case 2: 
+            case "tela login": 
                 stage.setScene(telaLoginTela); 
         }
     }

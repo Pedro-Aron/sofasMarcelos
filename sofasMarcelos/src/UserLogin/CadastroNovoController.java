@@ -41,7 +41,7 @@ public class CadastroNovoController {
 
     @FXML
     void voltar(ActionEvent event) {
-        App.change_scene(2);
+        App.change_scene("tela login");
     }
 
 } 
