@@ -44,8 +44,8 @@ public class ManejoDB {
         }
     }
 
-    public static void cadastrar_vendedor(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
-        String sql = "INSERT INTO vendedor (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
+    public static void cadastrar_cliente(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
+        String sql = "INSERT INTO cliente (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement comandoVendedor = conexao.prepareStatement(sql);
         comandoVendedor.setString(1, nome);
         comandoVendedor.setString(2, cpf);

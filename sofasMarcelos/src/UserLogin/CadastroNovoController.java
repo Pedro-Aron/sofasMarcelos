@@ -37,7 +37,7 @@ public class CadastroNovoController {
     @FXML
     void confirmar_cadastro(ActionEvent event) throws SQLException {
         System.out.println("Chegou aqui");
-        ManejoDB.cadastrar_vendedor(campo_usuario.getText(), campo_cpf.getText(), campo_rg.getText(), campo_senha.getText(), campo_telefone.getText(), campo_login.getText(), campo_email.getText());
+        ManejoDB.cadastrar_cliente(campo_usuario.getText(), campo_cpf.getText(), campo_rg.getText(), campo_senha.getText(), campo_telefone.getText(), campo_login.getText(), campo_email.getText());
     }
 
     @FXML
