@@ -55,7 +55,6 @@ public class ManejoDB {
         comandoVendedor.setString(6, login);
         comandoVendedor.setString(7, senha);
         comandoVendedor.execute();
-        System.out.println("Chegou aqui");
         comandoVendedor.close();
     }
 }
