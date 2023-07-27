@@ -18,7 +18,7 @@
     <MenuBar VBox.vgrow="NEVER">
       
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;TextField fx:id=&quot;campo_usuario&quot; layoutX=&quot;101.0&quot; layoutY=&quot;197.0&quot; promptText=&quot;Usuário&quot; style=&quot;-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;&quot; xmlns=&quot;http://javafx.com/javafx/20.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="394.0" prefWidth="676.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;TextField fx:id=&quot;campo_usuario&quot; layoutX=&quot;101.0&quot; layoutY=&quot;197.0&quot; promptText=&quot;Usuário&quot; style=&quot;-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;&quot; xmlns=&quot;http://javafx.com/javafx/20.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;" VBox.vgrow="ALWAYS">
       <children>
             <Button fx:id="botao_voltar" layoutX="272.0" layoutY="350.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #4b0d9c;" text="VOLTAR" textFill="#fcfcfc">
                <font>
@@ -26,7 +26,7 @@
                </font>
             </Button>
             <Label layoutX="127.0" layoutY="73.0" />
-            <Label layoutX="89.0" layoutY="83.0" prefHeight="27.0" prefWidth="40.0" text="Nome:" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="511.0" AnchorPane.topAnchor="83.0">
+            <Label layoutX="93.0" layoutY="69.0" prefHeight="27.0" prefWidth="40.0" text="Nome:" AnchorPane.bottomAnchor="279.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="507.0" AnchorPane.topAnchor="69.0">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
@@ -79,32 +79,32 @@
                   <Reflection />
                </effect>
             </ImageView>
-            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" prefHeight="27.0" prefWidth="373.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" prefHeight="27.0" prefWidth="373.0" promptText="Usuário User Exemplo Example" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_cpf" layoutX="153.0" layoutY="115.0" prefHeight="27.0" prefWidth="189.0" promptText="CPF" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_cpf" layoutX="153.0" layoutY="115.0" prefHeight="27.0" prefWidth="189.0" promptText="111.111.111-11" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_rg" layoutX="379.0" layoutY="115.0" prefHeight="27.0" prefWidth="147.0" promptText="RG" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_rg" layoutX="379.0" layoutY="115.0" prefHeight="27.0" prefWidth="147.0" promptText="MG-11.111.111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_email" layoutX="155.0" layoutY="147.0" prefHeight="27.0" prefWidth="373.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_email" layoutX="155.0" layoutY="147.0" prefHeight="27.0" prefWidth="373.0" promptText="exemplousuario@exemplo.com" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_telefone" layoutX="155.0" layoutY="182.0" prefHeight="27.0" prefWidth="209.0" promptText="Telefone" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_telefone" layoutX="155.0" layoutY="182.0" prefHeight="27.0" prefWidth="209.0" promptText="(11) 11111-1111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_login" layoutX="155.0" layoutY="217.0" prefHeight="27.0" prefWidth="209.0" promptText="Nome de Login" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_login" layoutX="155.0" layoutY="217.0" prefHeight="27.0" prefWidth="209.0" promptText="usuario111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
@@ -114,7 +114,7 @@
                   <Font name="Times New Roman" size="24.0" />
                </font>
             </Text>
-            <PasswordField fx:id="campo_senha" layoutX="158.0" layoutY="255.0" prefHeight="25.0" prefWidth="209.0" promptText="Senha" style="-fx-border-color: #4B0D9C; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="campo_senha" layoutX="158.0" layoutY="255.0" prefHeight="27.0" prefWidth="209.0" style="-fx-border-color: #4B0D9C; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
       </children>
     </AnchorPane>
   </children>
