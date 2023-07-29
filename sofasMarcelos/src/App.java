@@ -8,6 +8,7 @@ public class App extends Application {
     private static Scene telaCadastroTela; 
     private static Scene telaCadastroErrorTela; 
     private static Scene telaCadastroCorretoTela; 
+    private static Scene telaEsqueceuSenhaTela; 
 
     private static Stage stage; 
 
@@ -36,6 +37,9 @@ public class App extends Application {
         final FXMLLoader telaCadastroCorretoXML = new FXMLLoader(getClass().getResource("telaCadastroCorreto.fxml")); 
         telaCadastroCorretoTela = new Scene(telaCadastroCorretoXML.load()); 
 
+        final FXMLLoader telaEsqueceuSenhaXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenha.fxml"));
+        telaEsqueceuSenhaTela = new Scene(telaEsqueceuSenhaXML.load()); 
+
         stage.setScene(telaLoginTela);
         stage.show();
     }
@@ -53,6 +57,9 @@ public class App extends Application {
                 break; 
             case "tela cadastro correto":
                 stage.setScene(telaCadastroCorretoTela);
+            case "tela esqueceu senha": 
+                stage.setScene(telaEsqueceuSenhaTela);
+                break; 
         }
     }
 }

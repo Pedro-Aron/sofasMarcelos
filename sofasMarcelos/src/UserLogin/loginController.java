@@ -38,12 +38,12 @@ public class loginController {
             System.out.println(resultadoLogin);
 
     }
-    
+
     @FXML
     private Hyperlink link_esqueceu_senha;
 
     @FXML
     void esqueceu_senha(ActionEvent event) {
-
+        App.change_scene("tela esqueceu senha");
     }
 }
