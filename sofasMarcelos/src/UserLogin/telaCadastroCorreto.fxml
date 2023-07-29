@@ -51,11 +51,6 @@
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="botao_confirmar" layoutX="233.0" layoutY="294.0" mnemonicParsing="false" onAction="#confirmar_cadastro" prefHeight="35.0" prefWidth="163.0" style="-fx-background-color: #4b0d9c; -fx-cursor: hand;" text="CONFIRMAR" textFill="WHITE">
-               <font>
-                  <Font name="Century Gothic" size="12.0" />
-               </font>
-            </Button>
             <Label layoutX="91.0" layoutY="121.0" prefHeight="17.0" prefWidth="26.0" text="CPF:">
                <font>
                   <Font name="Century Gothic" size="12.0" />
@@ -79,32 +74,32 @@
                   <Reflection />
                </effect>
             </ImageView>
-            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" prefHeight="27.0" prefWidth="367.0" promptText="Usuário User Exemplo Example" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" prefHeight="27.0" prefWidth="367.0" style="-fx-background-color: #00D100; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_cpf" layoutX="153.0" layoutY="116.0" prefHeight="27.0" prefWidth="189.0" promptText="111.111.111-11" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_cpf" layoutX="153.0" layoutY="116.0" prefHeight="27.0" prefWidth="189.0" style="-fx-background-color: #00D100; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_rg" layoutX="379.0" layoutY="115.0" prefHeight="27.0" prefWidth="143.0" promptText="MG-11.111.111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_rg" layoutX="377.0" layoutY="116.0" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #00D100; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_email" layoutX="153.0" layoutY="151.0" prefHeight="27.0" prefWidth="367.0" promptText="exemplousuario@exemplo.com" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_email" layoutX="153.0" layoutY="151.0" prefHeight="27.0" prefWidth="367.0" style="-fx-background-color: #00D100; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_telefone" layoutX="152.0" layoutY="187.0" prefHeight="27.0" prefWidth="215.0" promptText="(11) 11111-1111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_telefone" layoutX="153.0" layoutY="187.0" prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #00D100; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_login" layoutX="152.0" layoutY="221.0" prefHeight="27.0" prefWidth="215.0" promptText="usuario111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_login" layoutX="153.0" layoutY="221.0" prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #00D100; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
@@ -114,7 +109,12 @@
                   <Font name="Times New Roman" size="24.0" />
                </font>
             </Text>
-            <PasswordField fx:id="campo_senha" layoutX="152.0" layoutY="248.0" prefHeight="27.0" prefWidth="215.0" style="-fx-border-color: #4B0D9C; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="campo_senha" layoutX="153.0" layoutY="254.0" prefHeight="27.0" prefWidth="209.0" style="-fx-border-color: #4B0D9C; -fx-background-color: #00D100; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="#007500" layoutX="148.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO REALIZADO COM SUCESSO">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

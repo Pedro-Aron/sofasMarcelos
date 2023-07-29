@@ -7,6 +7,8 @@ public class App extends Application {
     private static Scene telaLoginTela; 
     private static Scene telaCadastroTela; 
     private static Scene telaCadastroErrorTela; 
+    private static Scene telaCadastroCorretoTela; 
+
     private static Stage stage; 
 
     public static void main(String[] args) throws Exception {
@@ -31,6 +33,9 @@ public class App extends Application {
         final FXMLLoader telaCadastroErrorXML = new FXMLLoader(getClass().getResource("telaCadastroError.fxml"));
         telaCadastroErrorTela = new Scene(telaCadastroErrorXML.load());
 
+        final FXMLLoader telaCadastroCorretoXML = new FXMLLoader(getClass().getResource("telaCadastroCorreto.fxml")); 
+        telaCadastroCorretoTela = new Scene(telaCadastroCorretoXML.load()); 
+
         stage.setScene(telaLoginTela);
         stage.show();
     }
@@ -46,6 +51,8 @@ public class App extends Application {
             case "tela cadastro error": 
                 stage.setScene(telaCadastroErrorTela);
                 break; 
+            case "tela cadastro correto":
+                stage.setScene(telaCadastroCorretoTela);
         }
     }
 }

@@ -48,6 +48,7 @@ public class ManejoDB {
 
         if ( nome.equals("") || cpf.equals("")|| rg.equals("")|| senha.equals("") || telefone.equals("")|| login.equals("") || email.equals("")){
             App.change_scene("tela cadastro error");
+            return; 
         }   
 
         String sql = "INSERT INTO cliente (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
@@ -61,5 +62,7 @@ public class ManejoDB {
         comandoVendedor.setString(7, senha);
         comandoVendedor.execute();
         comandoVendedor.close();
+
+        App.change_scene("tela cadastro correto");
     }
 }

@@ -25,8 +25,10 @@ public class loginController {
 
     @FXML
     void logar(ActionEvent event) {
+        // É neste método que setará para a tela do vendedor ou do cliente 
         String usuario = campo_usuario.getText();
         String senha = campo_senha.getText();
+        // se for vendedor, haverá outra tela com a opção de cadastrar outro vendedor
 
         String resultadoLogin; 
         if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null)
