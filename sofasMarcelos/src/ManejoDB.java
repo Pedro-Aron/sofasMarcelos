@@ -45,9 +45,11 @@ public class ManejoDB {
     }
 
     public static void cadastrar_cliente(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
-        // Conferir se todos os valores estão condizentes com o padrão e/ou 
-        // verificar se estão vazios antes de inserir no banco. 
-        
+
+        if ( nome.equals("") || cpf.equals("")|| rg.equals("")|| senha.equals("") || telefone.equals("")|| login.equals("") || email.equals("")){
+            App.change_scene("tela cadastro error");
+        }   
+
         String sql = "INSERT INTO cliente (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement comandoVendedor = conexao.prepareStatement(sql);
         comandoVendedor.setString(1, nome);

@@ -1,15 +1,10 @@
-import java.sql.SQLException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class CadastroNovoController {
-
-    @FXML
-    private Button botao_confirmar;
+public class CadastroErrorController {
 
     @FXML
     private Button botao_voltar;
@@ -36,16 +31,8 @@ public class CadastroNovoController {
     private TextField campo_usuario;
 
     @FXML
-    void confirmar_cadastro(ActionEvent event) throws SQLException {
-        ManejoDB.cadastrar_cliente(campo_usuario.getText(), campo_cpf.getText(), campo_rg.getText(), campo_senha.getText(), campo_telefone.getText(), campo_login.getText(), campo_email.getText());
-    }
-
-    @FXML
     void voltar(ActionEvent event) {
-        App.change_scene("tela login");
+        App.change_scene("tela cadastro");
     }
 
-} 
-
-
-
+}

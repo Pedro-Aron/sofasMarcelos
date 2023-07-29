@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroErrorController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" prefHeight="420.0" prefWidth="640.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;TextField fx:id=&quot;campo_usuario&quot; layoutX=&quot;101.0&quot; layoutY=&quot;197.0&quot; promptText=&quot;Usuário&quot; style=&quot;-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;&quot; xmlns=&quot;http://javafx.com/javafx/20.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="botao_voltar" layoutX="226.0" layoutY="350.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: #4b0d9c; -fx-cursor: hand;" text="VOLTAR" textFill="#fcfcfc">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="127.0" layoutY="73.0" />
+            <Label layoutX="88.0" layoutY="85.0" opacity="0.4" prefHeight="20.0" prefWidth="50.0" text="Nome:" AnchorPane.bottomAnchor="345.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="85.0">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="153.0" opacity="0.4" prefHeight="23.0" prefWidth="35.0" text="Email:">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="188.0" opacity="0.4" prefHeight="27.0" prefWidth="54.0" text="Telefone:">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="221.0" opacity="0.4" prefHeight="27.0" prefWidth="35.0" text="Login:">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="254.0" opacity="0.4" prefHeight="27.0" prefWidth="40.0" text="Senha:">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="121.0" opacity="0.4" prefHeight="17.0" prefWidth="26.0" text="CPF:">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="121.0" opacity="0.4" prefHeight="23.0" prefWidth="22.0" text="RG:">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="25.0" text="CADASTRE-SE">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" opacity="0.4" prefHeight="27.0" prefWidth="373.0" promptText="Usuário User Exemplo Example" style="-fx-background-color: #dc143c; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campo_cpf" layoutX="153.0" layoutY="115.0" opacity="0.4" prefHeight="27.0" prefWidth="189.0" promptText="111.111.111-11" style="-fx-background-color: #dc143c; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campo_rg" layoutX="379.0" layoutY="115.0" opacity="0.4" prefHeight="27.0" prefWidth="147.0" promptText="MG-11.111.111" style="-fx-background-color: #dc143c; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campo_email" layoutX="153.0" layoutY="151.0" opacity="0.4" prefHeight="27.0" prefWidth="373.0" promptText="exemplousuario@exemplo.com" style="-fx-background-color: #dc143c; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campo_telefone" layoutX="152.0" layoutY="187.0" opacity="0.4" prefHeight="27.0" prefWidth="215.0" promptText="(11) 11111-1111" style="-fx-background-color: #dc143c; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campo_login" layoutX="152.0" layoutY="221.0" opacity="0.4" prefHeight="27.0" prefWidth="215.0" promptText="usuario111" style="-fx-background-color: #dc143c; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </TextField>
+            <Text fill="#4b0d9c" layoutX="331.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SOFÁS MARCELO" textAlignment="CENTER" wrappingWidth="198.97223663330078">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="campo_senha" layoutX="152.0" layoutY="254.0" opacity="0.4" prefHeight="27.0" prefWidth="215.0" style="-fx-border-color: #4B0D9C; -fx-background-color: #dc143c; -fx-border-width: 0px 0px 2px 0px;" />
+            <Text fill="CRIMSON" layoutX="98.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PREENCHA CORRETAMENTE TODOS OS  CAMPOS" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
