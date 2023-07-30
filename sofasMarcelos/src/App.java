@@ -9,6 +9,7 @@ public class App extends Application {
     private static Scene telaCadastroErrorTela; 
     private static Scene telaCadastroCorretoTela; 
     private static Scene telaEsqueceuSenhaTela; 
+    private static Scene telaEsqueceuSenhaErrorTela; 
 
     private static Stage stage; 
 
@@ -40,6 +41,9 @@ public class App extends Application {
         final FXMLLoader telaEsqueceuSenhaXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenha.fxml"));
         telaEsqueceuSenhaTela = new Scene(telaEsqueceuSenhaXML.load()); 
 
+        final FXMLLoader telaEsqueceuSenhaErrorXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenhaError.fxml"));
+        telaEsqueceuSenhaErrorTela = new Scene(telaEsqueceuSenhaErrorXML.load()); 
+
         stage.setScene(telaLoginTela);
         stage.show();
     }
@@ -60,6 +64,9 @@ public class App extends Application {
             case "tela esqueceu senha": 
                 stage.setScene(telaEsqueceuSenhaTela);
                 break; 
+            case "tela esqueceu senha error": 
+                stage.setScene(telaEsqueceuSenhaErrorTela);
+                break;
         }
     }
 }

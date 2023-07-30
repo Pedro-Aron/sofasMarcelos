@@ -65,4 +65,18 @@ public class ManejoDB {
 
         App.change_scene("tela cadastro correto");
     }
+
+    public static boolean confere_email(String email_passado) throws SQLException{
+        // É necessário fazer a busca para vendedor também 
+        String sql_cliente = "SELECT email FROM cliente WHERE email = '"+email_passado+"'"; 
+        PreparedStatement comando_cliente = conexao.prepareStatement(sql_cliente);
+        ResultSet retorno_cliente = ((java.sql.Statement) comando_cliente).executeQuery(sql_cliente);
+
+        while(retorno_cliente.next()){
+            if(retorno_cliente.getString("email").equals(email_passado)){
+                return true; 
+            }
+        }
+        return false; 
+    }
 }
