@@ -46,12 +46,28 @@ public class ManejoDB {
 
     public static void cadastrar_cliente(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
 
+        // Confere se há algum campo vazio 
         if ( nome.equals("") || cpf.equals("")|| rg.equals("")|| senha.equals("") || telefone.equals("")|| login.equals("") || email.equals("")){
             App.change_scene("tela cadastro error");
             return; 
         }   
 
-        String sql = "INSERT INTO cliente (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
+        // Conferir se todos os dados enviados estão no padrão correto.
+
+
+        // Confere se este cliente já não está cadastrado. 
+        String sql = "SELECT FROM cliente WHERE nome = '"+nome+"'";
+        PreparedStatement comando = conexao.prepareStatement(sql); 
+        ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
+
+        while(retorno.next()){
+            if(retorno.getString("nome").equals(nome)){
+                App.change_scene("tela cadastro error");
+            }
+        }
+
+        // Cadastra o cliente no banco
+        sql = "INSERT INTO cliente (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement comandoVendedor = conexao.prepareStatement(sql);
         comandoVendedor.setString(1, nome);
         comandoVendedor.setString(2, cpf);
@@ -68,6 +84,7 @@ public class ManejoDB {
 
     public static boolean confere_email(String email_passado) throws SQLException{
         // É necessário fazer a busca para vendedor também 
+
         String sql_cliente = "SELECT email FROM cliente WHERE email = '"+email_passado+"'"; 
         PreparedStatement comando_cliente = conexao.prepareStatement(sql_cliente);
         ResultSet retorno_cliente = ((java.sql.Statement) comando_cliente).executeQuery(sql_cliente);

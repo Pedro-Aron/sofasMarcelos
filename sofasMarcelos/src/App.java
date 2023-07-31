@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 
 public class App extends Application {
     private static Scene telaLoginTela; 
+    private static Scene telaLoginErrorTela; 
     private static Scene telaCadastroTela; 
     private static Scene telaCadastroErrorTela; 
     private static Scene telaCadastroCorretoTela; 
@@ -44,17 +45,23 @@ public class App extends Application {
         final FXMLLoader telaEsqueceuSenhaErrorXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenhaError.fxml"));
         telaEsqueceuSenhaErrorTela = new Scene(telaEsqueceuSenhaErrorXML.load()); 
 
+        final FXMLLoader telaLoginErrorXML = new FXMLLoader(getClass().getResource("telaLoginError.fxml"));
+        telaLoginErrorTela = new Scene(telaLoginErrorXML.load()); 
+
         stage.setScene(telaLoginTela);
         stage.show();
     }
 
     public static void change_scene(String codigo_tela){
         switch (codigo_tela){
+            case "tela login": 
+                stage.setScene(telaLoginTela);
+                break; 
+            case "tela login error": 
+                stage.setScene(telaLoginErrorTela); 
+                break;
             case "tela cadastro": 
                 stage.setScene(telaCadastroTela);
-                break;
-            case "tela login": 
-                stage.setScene(telaLoginTela); 
                 break; 
             case "tela cadastro error": 
                 stage.setScene(telaCadastroErrorTela);

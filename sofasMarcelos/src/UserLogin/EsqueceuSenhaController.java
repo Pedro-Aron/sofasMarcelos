@@ -1,4 +1,6 @@
 import java.sql.SQLException;
+import java.util.Random;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -18,13 +20,23 @@ public class EsqueceuSenhaController {
     @FXML
     void enviar(ActionEvent event) throws SQLException {
         boolean flag = ManejoDB.confere_email(campo_email_recuperar.getText());
-
+        
         if(!flag){
             App.change_scene("tela esqueceu senha error");
             return; 
         }
             // mudar para a tela que diz que enviou 
             // e enviar o código para este email 
+
+        Random random = new Random(); 
+        int codigo_verificacao_int = random.nextInt(10000);
+        String codigo_verificacao_str = String.format("%04d", codigo_verificacao_int);
+
+        final String EMAIL_MARCELO = "sofasmarcelos@gmail.com"; 
+        final String SENHA_MARCELO = "feitocomexcelencia"; 
+
+
+
     }
 
     @FXML

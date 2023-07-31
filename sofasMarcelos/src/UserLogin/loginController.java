@@ -32,8 +32,11 @@ public class loginController {
         // se for vendedor, haverá outra tela com a opção de cadastrar outro vendedor
 
         String resultadoLogin; 
-        if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null)
+        if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null){
+            App.change_scene("tela login error");
             System.out.println("login nao encontrado");
+        }
+
         else 
             System.out.println(resultadoLogin);
 
