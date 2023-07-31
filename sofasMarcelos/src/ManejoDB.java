@@ -56,13 +56,14 @@ public class ManejoDB {
 
 
         // Confere se este cliente já não está cadastrado. 
-        String sql = "SELECT FROM cliente WHERE nome = '"+nome+"'";
+        String sql = "SELECT nome FROM cliente WHERE nome = '"+nome+"'";
         PreparedStatement comando = conexao.prepareStatement(sql); 
         ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
         while(retorno.next()){
-            if(retorno.getString("nome").equals(nome)){
+            if(retorno.getString("nome").equals(nome) || retorno.getString("cpf").equals(cpf)){
                 App.change_scene("tela cadastro error");
+                return; 
             }
         }
 

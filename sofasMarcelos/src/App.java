@@ -29,10 +29,13 @@ public class App extends Application {
 
         final FXMLLoader telaLoginXml = new FXMLLoader(getClass().getResource("telaLogin.fxml"));
         telaLoginTela = new Scene(telaLoginXml.load());
-
+        
+        final FXMLLoader telaLoginErrorXML = new FXMLLoader(getClass().getResource("telaLoginError.fxml"));
+        telaLoginErrorTela = new Scene(telaLoginErrorXML.load()); 
+        
         final FXMLLoader telaCadastroXML = new FXMLLoader(getClass().getResource("telaCadastro.fxml")); 
         telaCadastroTela = new Scene(telaCadastroXML.load());  
-
+        
         final FXMLLoader telaCadastroErrorXML = new FXMLLoader(getClass().getResource("telaCadastroError.fxml"));
         telaCadastroErrorTela = new Scene(telaCadastroErrorXML.load());
 
@@ -41,13 +44,11 @@ public class App extends Application {
 
         final FXMLLoader telaEsqueceuSenhaXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenha.fxml"));
         telaEsqueceuSenhaTela = new Scene(telaEsqueceuSenhaXML.load()); 
-
+        
         final FXMLLoader telaEsqueceuSenhaErrorXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenhaError.fxml"));
         telaEsqueceuSenhaErrorTela = new Scene(telaEsqueceuSenhaErrorXML.load()); 
-
-        final FXMLLoader telaLoginErrorXML = new FXMLLoader(getClass().getResource("telaLoginError.fxml"));
-        telaLoginErrorTela = new Scene(telaLoginErrorXML.load()); 
-
+        
+        
         stage.setScene(telaLoginTela);
         stage.show();
     }
