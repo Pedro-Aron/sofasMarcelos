@@ -69,6 +69,7 @@ public class App extends Application {
                 break; 
             case "tela cadastro correto":
                 stage.setScene(telaCadastroCorretoTela);
+                break; 
             case "tela esqueceu senha": 
                 stage.setScene(telaEsqueceuSenhaTela);
                 break; 
