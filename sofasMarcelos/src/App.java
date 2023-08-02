@@ -15,10 +15,10 @@ public class App extends Application {
     private static Stage stage; 
 
     public static void main(String[] args) throws Exception {
-        if (!ManejoDB.conectar()) {
-            System.out.println("NAO CONECTOU");
-            return;
-        }
+        // if (!ManejoDB.conectar()) {
+        //     System.out.println("NAO CONECTOU");
+        //     return;
+        // }
         
         launch(args);
     }
