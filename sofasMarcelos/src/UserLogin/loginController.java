@@ -5,11 +5,11 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class loginController {
+public class LoginController {
 
     @FXML
     private Button botao_Cadastro;
-
+    
     @FXML
     private Button botao_Login;
 
@@ -19,26 +19,30 @@ public class loginController {
     @FXML
     private TextField campo_usuario;
 
+
     @FXML
-    void cadastrar(ActionEvent event){
+    void cadastrar(ActionEvent event) {
         App.change_scene("tela cadastro");
     }
 
     @FXML
     void logar(ActionEvent event) {
-        // É neste método que setará para a tela do vendedor ou do cliente 
+        // É neste método que setará para a tela do vendedor ou do cliente
         String usuario = campo_usuario.getText();
         String senha = campo_senha.getText();
         // se for vendedor, haverá outra tela com a opção de cadastrar outro vendedor
 
-        String resultadoLogin; 
-        if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null){
+        String resultadoLogin;
+        if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null) {
             App.change_scene("tela login error");
             System.out.println("login nao encontrado");
         }
 
-        else 
-            System.out.println(resultadoLogin);
+        else
+            // conferir se é cliente ou vendedor 
+            // se for vendedor ir pra essa tela
+            App.change_scene("tela espaco vendedor");
+            
 
     }
 

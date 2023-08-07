@@ -9,6 +9,7 @@
         "JavaFX/javafx-sdk-20.0.1/lib/javafx.swing.jar",
         "JavaFX/javafx-sdk-20.0.1/lib/javafx.web.jar",
         "JavaFX/javafx-sdk-20.0.1/lib/javafx-swt.jar",
-        "libMySQL/mysql-connector-j-8.0.33.jar"
+        "libMySQL/mysql-connector-j-8.0.33.jar",
+        "libMySQL/javax.mail.jar"
     ]
 }

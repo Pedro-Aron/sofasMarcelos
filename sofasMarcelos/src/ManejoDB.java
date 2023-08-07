@@ -10,7 +10,7 @@ public class ManejoDB {
     static final String user = "root"; 
     static final String password = "1234"; 
 
-    public static boolean conectar() {
+    public static boolean conectar( ) {
         try {
             conexao = DriverManager.getConnection(url, user, password);
             System.out.println("CONECTOU");
@@ -53,7 +53,6 @@ public class ManejoDB {
         }   
 
         // Conferir se todos os dados enviados estão no padrão correto.
-
 
         // Confere se este cliente já não está cadastrado. 
         String sql = "SELECT nome FROM cliente WHERE nome = '"+nome+"'";

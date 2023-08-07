@@ -20,13 +20,13 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="402.0" prefWidth="650.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;TextField fx:id=&quot;campo_usuario&quot; layoutX=&quot;101.0&quot; layoutY=&quot;197.0&quot; promptText=&quot;Usuário&quot; style=&quot;-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;&quot; xmlns=&quot;http://javafx.com/javafx/20.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="botao_voltar" layoutX="272.0" layoutY="350.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #4b0d9c; -fx-cursor: hand;" text="VOLTAR" textFill="#fcfcfc">
+            <Button fx:id="botao_voltar" layoutX="294.0" layoutY="370.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #4b0d9c; -fx-cursor: hand;" text="VOLTAR" textFill="#fcfcfc">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </Button>
             <Label layoutX="127.0" layoutY="73.0" />
-            <Label layoutX="88.0" layoutY="86.0" prefHeight="17.0" prefWidth="50.0" text="Nome:" AnchorPane.bottomAnchor="317.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="86.0">
+            <Label layoutX="92.0" layoutY="71.0" prefHeight="17.0" prefWidth="50.0" text="Nome:" AnchorPane.bottomAnchor="332.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="508.0" AnchorPane.topAnchor="71.0">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
@@ -51,7 +51,7 @@
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="botao_confirmar" layoutX="233.0" layoutY="294.0" mnemonicParsing="false" onAction="#confirmar_cadastro" prefHeight="35.0" prefWidth="163.0" style="-fx-background-color: #4b0d9c; -fx-cursor: hand;" text="CONFIRMAR" textFill="WHITE">
+            <Button fx:id="botao_confirmar" layoutX="255.0" layoutY="322.0" mnemonicParsing="false" onAction="#confirmar_cadastro" prefHeight="35.0" prefWidth="163.0" style="-fx-background-color: #4b0d9c; -fx-cursor: hand;" text="CONFIRMAR" textFill="WHITE">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
@@ -73,13 +73,13 @@
             </Label>
             <ImageView fitHeight="73.0" fitWidth="96.0" layoutX="541.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../OneDrive/Documentos/Websites/sofasMarcelos/sofasMarcelos/src/UserLogin/logos/icone.png" />
+                  <Image url="@logos/icone.png" />
                </image>
                <effect>
                   <Reflection />
                </effect>
             </ImageView>
-            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" prefHeight="27.0" prefWidth="367.0" promptText="Usuário User Exemplo Example" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_usuario" layoutX="153.0" layoutY="81.0" prefHeight="27.0" prefWidth="374.0" promptText="Usuário User Exemplo Example" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
@@ -89,12 +89,12 @@
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_rg" layoutX="379.0" layoutY="115.0" prefHeight="27.0" prefWidth="143.0" promptText="MG-11.111.111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_rg" layoutX="379.0" layoutY="115.0" prefHeight="27.0" prefWidth="149.0" promptText="MG-11.111.111" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="campo_email" layoutX="153.0" layoutY="151.0" prefHeight="27.0" prefWidth="367.0" promptText="exemplousuario@exemplo.com" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="campo_email" layoutX="153.0" layoutY="151.0" prefHeight="27.0" prefWidth="374.0" promptText="exemplousuario@exemplo.com" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font>

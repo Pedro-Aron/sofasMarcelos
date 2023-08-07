@@ -1,7 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class App extends Application {
     private static Scene telaLoginTela; 
@@ -11,15 +11,14 @@ public class App extends Application {
     private static Scene telaCadastroCorretoTela; 
     private static Scene telaEsqueceuSenhaTela; 
     private static Scene telaEsqueceuSenhaErrorTela; 
+    private static Scene telaEspacoVendedorTela; 
 
     private static Stage stage; 
-
     public static void main(String[] args) throws Exception {
         if (!ManejoDB.conectar()) {
             System.out.println("NAO CONECTOU");
             return;
         }
-        
         launch(args);
     }
 
@@ -47,8 +46,10 @@ public class App extends Application {
         
         final FXMLLoader telaEsqueceuSenhaErrorXML = new FXMLLoader(getClass().getResource("telaEsqueceuSenhaError.fxml"));
         telaEsqueceuSenhaErrorTela = new Scene(telaEsqueceuSenhaErrorXML.load()); 
-        
-        
+
+        final FXMLLoader telaEspacoVendedorXML = new FXMLLoader(getClass().getResource("ESPACO_VENDEDOR/tela_espaco_vendedor.fxml"));
+        telaEspacoVendedorTela = new Scene(telaEspacoVendedorXML.load());
+
         stage.setScene(telaLoginTela);
         stage.show();
     }
@@ -75,6 +76,9 @@ public class App extends Application {
                 break; 
             case "tela esqueceu senha error": 
                 stage.setScene(telaEsqueceuSenhaErrorTela);
+                break;
+            case "tela espaco vendedor": 
+                stage.setScene(telaEspacoVendedorTela);
                 break;
         }
     }

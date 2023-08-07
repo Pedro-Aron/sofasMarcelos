@@ -5,7 +5,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class loginErrorController {
+public class LoginErrorController {
 
     @FXML
     private Button botao_Cadastro;
