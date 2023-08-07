@@ -15,10 +15,12 @@ public class App extends Application {
 
     private static Stage stage; 
     public static void main(String[] args) throws Exception {
+
         if (!ManejoDB.conectar()) {
             System.out.println("NAO CONECTOU");
             return;
         }
+
         launch(args);
     }
 
@@ -71,7 +73,7 @@ public class App extends Application {
             case "tela cadastro correto":
                 stage.setScene(telaCadastroCorretoTela);
                 break; 
-            case "tela esqueceu senha": 
+            case "tela esqueceu senha":     
                 stage.setScene(telaEsqueceuSenhaTela);
                 break; 
             case "tela esqueceu senha error": 
@@ -79,6 +81,7 @@ public class App extends Application {
                 break;
             case "tela espaco vendedor": 
                 stage.setScene(telaEspacoVendedorTela);
+                stage.setMaximized(true);
                 break;
         }
     }
