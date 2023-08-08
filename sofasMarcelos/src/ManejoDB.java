@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ManejoDB {
     private static Connection conexao;
-    static final String url = "jdbc:mysql://localhost:3306/cadastro"; 
+    static final String url = "jdbc:mysql://localhost:3306/loja_moveis"; 
     static final String user = "root"; 
-    static final String password = "1234"; 
+    static final String password = "123456"; 
 
     public static boolean conectar( ) {
         try {
@@ -55,7 +55,7 @@ public class ManejoDB {
         // Conferir se todos os dados enviados estão no padrão correto.
 
         // Confere se este cliente já não está cadastrado. 
-        String sql = "SELECT nome FROM cliente WHERE nome = '"+nome+"'";
+        String sql = "SELECT nome FROM vendedor WHERE nome = '"+nome+"'";
         PreparedStatement comando = conexao.prepareStatement(sql); 
         ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
@@ -67,7 +67,7 @@ public class ManejoDB {
         }
 
         // Cadastra o cliente no banco
-        sql = "INSERT INTO cliente (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
+        sql = "INSERT INTO vendedor (nome, cpf, rg, email, telefone, login, senha) values (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement comandoVendedor = conexao.prepareStatement(sql);
         comandoVendedor.setString(1, nome);
         comandoVendedor.setString(2, cpf);
