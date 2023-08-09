@@ -75,7 +75,7 @@ public class App extends Application {
                 break;
             case "tela loja interface": 
                 stage.setScene(telaLojaInterfaceTela); 
-                stage.setMaximized(true);
+                stage.setMaxHeight(600);
                 break; 
             case "tela espaco vendedor":
                 stage.setScene(telaEspacoVendedorTela);

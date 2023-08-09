@@ -7,6 +7,4 @@ public class UsuarioSessao {
     public static String numero;
     public static String cpf;
     public static Float comissoes;
-
-
 }

@@ -1,5 +1,6 @@
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -36,6 +37,10 @@ public class EspacoVendedorController {
     @FXML
     void consultar_estoque(MouseEvent event) {
 
+    }
+        @FXML
+    void volta_tela_login(ActionEvent event) {
+        App.change_scene("tela login");
     }
 
 }

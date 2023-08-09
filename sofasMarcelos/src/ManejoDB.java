@@ -7,9 +7,9 @@ import java.util.Random;
 
 public class ManejoDB {
     private static Connection conexao;
-    static final String url = "jdbc:mysql://localhost:3306/sofasmarcelos"; 
+    static final String url = "jdbc:mysql://localhost:3306/loja_moveis"; 
     static final String user = "root"; 
-    static final String password = "Aerodoido365"; 
+    static final String password = "123456"; 
 
     public static boolean conectar( ) {
         try {
@@ -30,7 +30,7 @@ public class ManejoDB {
 
             if (retornoVendedor.next()) {
                 UsuarioSessao.nome = retornoVendedor.getString(1);
-                UsuarioSessao.cpf = retornoVendedor.getString(2);
+                UsuarioSessao.cpf = retornoVendedor.getString(1);
                 UsuarioSessao.rg = retornoVendedor.getString(3);
                 UsuarioSessao.senha = retornoVendedor.getString(4);
                 UsuarioSessao.numero = retornoVendedor.getString(5);
@@ -88,18 +88,18 @@ public class ManejoDB {
 
     public static boolean reestoque (String id, int quantidade) {
         try {
-            String sql = "SELECT * from Produto WHERE id = '"+id+"'";
+            String sql = "SELECT * from produto WHERE id = '"+id+"'";
             PreparedStatement comando = conexao.prepareStatement(sql);
             ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
             if (retorno.next()) {
-                if (!retorno.getString(2).equals(UsuarioSessao.cpf))
+                if (!retorno.getString(3).equals(UsuarioSessao.cpf))
                     return false;
 
                 int va = Integer.parseInt(retorno.getString("quantidade"));
                 va += quantidade;
 
-                sql = "UPDATE Produto SET quantidade = "+va+" WHERE id = '"+id+"'";
+                sql = "UPDATE produto SET quantidade = "+va+" WHERE id = '"+id+"'";
                 comando = conexao.prepareStatement(sql);
                 ((java.sql.Statement) comando).executeUpdate(sql);
 
@@ -114,7 +114,7 @@ public class ManejoDB {
 
     public static boolean cadastroProduto (String nome, String descricao, Integer inicial, Float valor) {
         try {
-            String sql = "INSERT INTO Produto (nome, cpf_vendedor, descricao, preco, quantidade, id) values (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO produto (nome, cpf_vendedor, descricao, preco, quantidade, id) values (?, ?, ?, ?, ?, ?)";
             Random rand = new Random();
             Integer id = rand.nextInt(10000, 100000);
             PreparedStatement comando = conexao.prepareStatement(sql);

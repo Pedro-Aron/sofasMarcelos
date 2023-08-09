@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Reflection?>
@@ -8,19 +9,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaProdutosController">
    <left>
       <AnchorPane prefHeight="450.0" prefWidth="303.0" style="-fx-background-color: #4B0D9C;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="243.0" fitWidth="292.0" layoutX="11.0" layoutY="118.0" opacity="0.18" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="243.0" fitWidth="292.0" layoutX="11.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@UserLogin/logos/icone.png" />
+                  <Image url="@logo/icone.png" />
                </image>
                <effect>
                   <Reflection />
                </effect>
             </ImageView>
+            <Label alignment="CENTER" layoutX="82.0" layoutY="47.0" prefHeight="39.0" prefWidth="140.0" text="CADASTRO" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </left>
@@ -35,6 +42,32 @@
             <Button fx:id="reestocar" layoutX="115.0" layoutY="394.0" mnemonicParsing="false" onAction="#reestocando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="RE-ESTOCAR" textFill="WHITE" />
             <TextField fx:id="valor_produto" layoutX="79.0" layoutY="82.0" prefHeight="27.0" prefWidth="190.0" promptText="Valor" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="estoque_inicial" layoutX="79.0" layoutY="117.0" prefHeight="27.0" prefWidth="190.0" promptText="Estoque inicial" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/nome_produto.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/valor_produto.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/estoque_produto.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/id_produto.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="99.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo/reestocar_icone.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>
