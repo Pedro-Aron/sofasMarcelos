@@ -24,16 +24,18 @@
          </children>
       </AnchorPane>
    </left>
-   <right>
+   <center>
       <AnchorPane prefHeight="500.0" prefWidth="358.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="campo_nome" layoutX="79.0" layoutY="39.0" prefHeight="27.0" prefWidth="190.0" promptText="Nome do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="cadastro_produto" layoutX="114.0" layoutY="168.0" mnemonicParsing="false" onAction="#cadastrando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CADASTRAR" textFill="WHITE" />
-            <TextArea fx:id="campo_descricao" layoutX="79.0" layoutY="89.0" prefHeight="50.0" prefWidth="190.0" promptText="Descrição breve" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="campo_id" layoutX="79.0" layoutY="237.0" prefHeight="27.0" prefWidth="190.0" promptText="ID do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="reestoque" layoutX="131.0" layoutY="278.0" prefHeight="27.0" prefWidth="86.0" promptText="Reestoque" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="reestocar" layoutX="115.0" layoutY="335.0" mnemonicParsing="false" onAction="#reestocando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="RE-ESTOCAR" textFill="WHITE" />
+            <TextField fx:id="campo_nome" layoutX="79.0" layoutY="43.0" prefHeight="27.0" prefWidth="190.0" promptText="Nome do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="cadastro_produto" layoutX="114.0" layoutY="248.0" mnemonicParsing="false" onAction="#cadastrando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CADASTRAR" textFill="WHITE" />
+            <TextArea fx:id="campo_descricao" layoutX="79.0" layoutY="161.0" prefHeight="50.0" prefWidth="190.0" promptText="Descrição breve" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="campo_id" layoutX="79.0" layoutY="311.0" prefHeight="27.0" prefWidth="190.0" promptText="ID do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="reestoque" layoutX="132.0" layoutY="349.0" prefHeight="27.0" prefWidth="86.0" promptText="Reestoque" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="reestocar" layoutX="115.0" layoutY="394.0" mnemonicParsing="false" onAction="#reestocando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="RE-ESTOCAR" textFill="WHITE" />
+            <TextField fx:id="valor_produto" layoutX="79.0" layoutY="82.0" prefHeight="27.0" prefWidth="190.0" promptText="Valor" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="estoque_inicial" layoutX="79.0" layoutY="117.0" prefHeight="27.0" prefWidth="190.0" promptText="Estoque inicial" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
          </children>
       </AnchorPane>
-   </right>
+   </center>
 </BorderPane>

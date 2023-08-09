@@ -11,6 +11,12 @@ public class TelaProdutosController {
     private Button cadastro_produto;
 
     @FXML
+    private TextField estoque_inicial;
+
+    @FXML
+    private TextField valor_produto;
+
+    @FXML
     private Button reestocar;
 
     @FXML
@@ -33,7 +39,7 @@ public class TelaProdutosController {
 
     @FXML
     void cadastrando(ActionEvent e) {
-        if (ManejoDB.cadastroProduto(campo_nome.getText(), campo_descricao.getText()) == false)
+        if (ManejoDB.cadastroProduto(campo_nome.getText(), campo_descricao.getText(), Integer.parseInt(estoque_inicial.getText()), Float.parseFloat(valor_produto.getText())) == false)
             System.out.println("Verifique a tentativa de cadastro novamente");
     }
 

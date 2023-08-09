@@ -3,6 +3,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 
 public class ManejoDB {
     private static Connection conexao;
@@ -92,12 +93,9 @@ public class ManejoDB {
             ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
             if (retorno.next()) {
-                System.out.println("ci2: "+retorno.getString(2));
-                System.out.println(UsuarioSessao.cpf);
                 if (!retorno.getString(2).equals(UsuarioSessao.cpf))
                     return false;
 
-                System.out.println("ci2: "+retorno.getString("quantidade"));
                 int va = Integer.parseInt(retorno.getString("quantidade"));
                 va += quantidade;
 
@@ -114,7 +112,24 @@ public class ManejoDB {
         }
     }
 
-    // public static boolean cadastroProduto (String nome, String descricao) {
+    public static boolean cadastroProduto (String nome, String descricao, Integer inicial, Float valor) {
+        try {
+            String sql = "INSERT INTO Produto (nome, cpf_vendedor, descricao, preco, quantidade, id) values (?, ?, ?, ?, ?, ?)";
+            Random rand = new Random();
+            Integer id = rand.nextInt(10000, 100000);
+            PreparedStatement comando = conexao.prepareStatement(sql);
+            comando.setString(1, nome);
+            comando.setString(2, UsuarioSessao.cpf);
+            comando.setString(3, descricao);
+            comando.setString(4, valor.toString());
+            comando.setString(5, inicial.toString());
+            comando.setString(6, id.toString());
+            comando.execute();
+            comando.close();
 
-    // }
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
 }
