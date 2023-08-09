@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaProdutosController">
+   <left>
+      <AnchorPane prefHeight="450.0" prefWidth="303.0" style="-fx-background-color: #4B0D9C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="243.0" fitWidth="292.0" layoutX="11.0" layoutY="118.0" opacity="0.18" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@UserLogin/logos/icone.png" />
+               </image>
+               <effect>
+                  <Reflection />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="campo_nome" layoutX="79.0" layoutY="39.0" prefHeight="27.0" prefWidth="190.0" promptText="Nome do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="cadastro_produto" layoutX="114.0" layoutY="168.0" mnemonicParsing="false" onAction="#cadastrando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CADASTRAR" textFill="WHITE" />
+            <TextArea fx:id="campo_descricao" layoutX="79.0" layoutY="89.0" prefHeight="50.0" prefWidth="190.0" promptText="Descrição breve" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="campo_id" layoutX="79.0" layoutY="237.0" prefHeight="27.0" prefWidth="190.0" promptText="ID do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="reestoque" layoutX="131.0" layoutY="278.0" prefHeight="27.0" prefWidth="86.0" promptText="Reestoque" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="reestocar" layoutX="115.0" layoutY="335.0" mnemonicParsing="false" onAction="#reestocando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="RE-ESTOCAR" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -9,7 +9,9 @@ public class App extends Application {
     private static Scene telaCadastroTela; 
     private static Scene telaCadastroErrorTela; 
     private static Scene telaCadastroCorretoTela;
-    private static Scene telaLojaInterfaceTela;  
+    private static Scene telaLojaInterfaceTela;
+    private static Scene telaEspacoVendedorTela;
+    private static Scene telaCadastroProdutosTela;
 
     private static Stage stage; 
     public static void main(String[] args) throws Exception {
@@ -25,6 +27,12 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage; 
+
+        final FXMLLoader telaCadastroProdutoXml = new FXMLLoader(getClass().getResource("tela_produtos.fxml"));
+        telaCadastroProdutosTela = new Scene(telaCadastroProdutoXml.load());
+
+        final FXMLLoader telaEspacoVendedorXml = new FXMLLoader(getClass().getResource("tela_espaco_vendedor.fxml"));
+        telaEspacoVendedorTela = new Scene(telaEspacoVendedorXml.load());
 
         final FXMLLoader telaLoginXml = new FXMLLoader(getClass().getResource("telaLogin.fxml"));
         telaLoginTela = new Scene(telaLoginXml.load());     
@@ -69,6 +77,12 @@ public class App extends Application {
                 stage.setScene(telaLojaInterfaceTela); 
                 stage.setMaximized(true);
                 break; 
+            case "tela espaco vendedor":
+                stage.setScene(telaEspacoVendedorTela);
+                break;
+            case "tela cadastro produtos":
+                stage.setScene(telaCadastroProdutosTela);
+                break;
         }
     }
 }

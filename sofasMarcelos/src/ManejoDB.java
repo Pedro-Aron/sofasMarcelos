@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ManejoDB {
     private static Connection conexao;
-    static final String url = "jdbc:mysql://localhost:3306/cadastro"; 
+    static final String url = "jdbc:mysql://localhost:3306/sofasmarcelos"; 
     static final String user = "root"; 
-    static final String password = "1234"; 
+    static final String password = "Aerodoido365"; 
 
     public static boolean conectar( ) {
         try {
@@ -21,30 +21,33 @@ public class ManejoDB {
         }
     }
 
-    public static String verificaLogin(String login, String senha) {
+    public static boolean verificaLogin(String login, String senha) {
         try {
-            String tentativaVendedor = "SELECT login, senha from vendedor where login = '" +login+ "' and senha = '" +senha+ "'";
+            String tentativaVendedor = "SELECT * from vendedor where login = '" +login+ "' and senha = '" +senha+ "'";
             PreparedStatement comandoVendedor = conexao.prepareStatement(tentativaVendedor);
             ResultSet retornoVendedor = ((java.sql.Statement) comandoVendedor).executeQuery(tentativaVendedor);
 
-            if (retornoVendedor.next()) 
-                return retornoVendedor.getString(1) + " vendedor";
+            if (retornoVendedor.next()) {
+                UsuarioSessao.nome = retornoVendedor.getString(1);
+                UsuarioSessao.cpf = retornoVendedor.getString(2);
+                UsuarioSessao.rg = retornoVendedor.getString(3);
+                UsuarioSessao.senha = retornoVendedor.getString(4);
+                UsuarioSessao.numero = retornoVendedor.getString(5);
+                UsuarioSessao.usuario = retornoVendedor.getString(6);
+                UsuarioSessao.email = retornoVendedor.getString(7);
+                UsuarioSessao.comissoes = retornoVendedor.getFloat(8);
+                return true;
+            }
+                
 
-            String tentativaCliente = "SELECT login, senha from cliente where login = '" +login+ "' and senha = '" +senha+ "'";
-            PreparedStatement comandoCliente = conexao.prepareStatement(tentativaCliente);
-            ResultSet retornoCliente = ((java.sql.Statement) comandoCliente).executeQuery(tentativaCliente);
-
-            if (retornoCliente.next()) 
-                return retornoCliente.getString(1) + " cliente";
-
-            return null;
+            return false;
         } catch (SQLException e) {
             System.out.println(e.getMessage() + "\n" + e.getErrorCode());
-            return null;
+            return false;
         }
     }
 
-    public static void cadastrar_cliente(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
+    public static void cadastrar_vendedor(String nome, String cpf, String rg, String senha, String telefone, String login, String email) throws SQLException{
 
         // Confere se há algum campo vazio 
         if ( nome.equals("") || cpf.equals("")|| rg.equals("")|| senha.equals("") || telefone.equals("")|| login.equals("") || email.equals("")){
@@ -82,4 +85,11 @@ public class ManejoDB {
         App.change_scene("tela cadastro correto");
     }
 
+    public static boolean reestoque (String id, int quantidade) {
+
+    }
+
+    public static boolean cadastroProduto (String nome, String descricao) {
+
+    }
 }
