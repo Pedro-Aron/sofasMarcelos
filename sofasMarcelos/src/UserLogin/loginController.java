@@ -1,7 +1,6 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -36,21 +35,7 @@ public class LoginController {
         if ((resultadoLogin = ManejoDB.verificaLogin(usuario, senha)) == null) {
             App.change_scene("tela login error");
             System.out.println("login nao encontrado");
+            return; 
         }
-
-        else
-            // conferir se é cliente ou vendedor 
-            // se for vendedor ir pra essa tela
-            App.change_scene("tela espaco vendedor");
-            
-
-    }
-
-    @FXML
-    private Hyperlink link_esqueceu_senha;
-
-    @FXML
-    void esqueceu_senha(ActionEvent event) {
-        App.change_scene("tela esqueceu senha");
     }
 }

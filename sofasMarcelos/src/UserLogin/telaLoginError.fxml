@@ -18,7 +18,7 @@
          <children>
             <ImageView fitHeight="243.0" fitWidth="292.0" layoutX="35.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../logos/icone.png" />
+                  <Image url="@logos/icone.png" />
                </image>
                <effect>
                   <Reflection />
@@ -51,7 +51,7 @@
             </ImageView>
             <ImageView fitHeight="130.0" fitWidth="138.0" layoutX="103.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../logos/tela_login_logo-removebg-preview.png" />
+                  <Image url="@logos/tela_login_logo-removebg-preview.png" />
                </image>
             </ImageView>
             <Text layoutX="121.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo!">
