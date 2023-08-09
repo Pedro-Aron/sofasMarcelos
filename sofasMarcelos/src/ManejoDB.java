@@ -58,7 +58,7 @@ public class ManejoDB {
         // Conferir se todos os dados enviados estão no padrão correto.
 
         // Confere se este cliente já não está cadastrado. 
-        String sql = "SELECT nome FROM vendedor WHERE nome = '"+nome+"'";
+        String sql = "SELECT nome FROM Vendedor WHERE nome = '"+nome+"'";
         PreparedStatement comando = conexao.prepareStatement(sql); 
         ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
@@ -86,10 +86,35 @@ public class ManejoDB {
     }
 
     public static boolean reestoque (String id, int quantidade) {
+        try {
+            String sql = "SELECT * from Produto WHERE id = '"+id+"'";
+            PreparedStatement comando = conexao.prepareStatement(sql);
+            ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
+            if (retorno.next()) {
+                System.out.println("ci2: "+retorno.getString(2));
+                System.out.println(UsuarioSessao.cpf);
+                if (!retorno.getString(2).equals(UsuarioSessao.cpf))
+                    return false;
+
+                System.out.println("ci2: "+retorno.getString("quantidade"));
+                int va = Integer.parseInt(retorno.getString("quantidade"));
+                va += quantidade;
+
+                sql = "UPDATE Produto SET quantidade = "+va+" WHERE id = '"+id+"'";
+                comando = conexao.prepareStatement(sql);
+                ((java.sql.Statement) comando).executeUpdate(sql);
+
+                return true;
+            }
+
+            return false;
+        } catch (SQLException e) {
+            return false;
+        }
     }
 
-    public static boolean cadastroProduto (String nome, String descricao) {
+    // public static boolean cadastroProduto (String nome, String descricao) {
 
-    }
+    // }
 }
