@@ -37,5 +37,6 @@ public class LoginController {
             System.out.println("login nao encontrado");
             return; 
         }
+        App.change_scene("tela loja interface");
     }
 }
