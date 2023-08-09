@@ -26,12 +26,12 @@ public class EspacoVendedorController {
 
     @FXML
     void cadastrar_vendedor(MouseEvent event) {
-
+        App.change_scene("tela cadastro");
     }
 
     @FXML
     void consultar_cliente(MouseEvent event) {
-
+        App.change_scene("tela cadastro vendas");
     }
 
     @FXML

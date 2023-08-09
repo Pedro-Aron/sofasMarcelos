@@ -68,6 +68,11 @@
                   <Image url="@logo/reestocar_icone.png" />
                </image>
             </ImageView>
+            <Button layoutX="293.0" layoutY="420.0" mnemonicParsing="false" onAction="#voltarTelaLoginAPartirTelaCadastroProduto" prefHeight="17.0" prefWidth="39.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="Voltar" textFill="WHITE">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </center>
