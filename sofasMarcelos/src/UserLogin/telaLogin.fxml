@@ -15,7 +15,7 @@
    <left>
       <AnchorPane prefHeight="450.0" prefWidth="303.0" style="-fx-background-color: #4B0D9C;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="243.0" fitWidth="292.0" layoutX="35.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="243.0" fitWidth="292.0" layoutX="11.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logos/icone.png" />
                </image>
@@ -23,12 +23,12 @@
                   <Reflection />
                </effect>
             </ImageView>
-            <Text fill="WHITE" layoutX="69.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SOFÁS MARCELOS" wrappingWidth="211.97223663330078">
+            <Text fill="WHITE" layoutX="45.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SOFÁS MARCELOS" wrappingWidth="211.97223663330078">
                <font>
                   <Font name="Times New Roman" size="24.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="76.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feito com excelencia" />
+            <Text fill="WHITE" layoutX="147.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feito com excelencia" />
          </children>
       </AnchorPane>
    </left>
@@ -41,12 +41,12 @@
             <Button fx:id="botao_Cadastro" layoutX="116.0" layoutY="380.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CADASTRE-SE" textFill="WHITE" />
             <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="71.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../logos/user_logo-removebg-preview.png" />
+                  <Image url="@logos/user_logo-removebg-preview.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="72.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../logos/key_logo-removebg-preview.png" />
+                  <Image url="@logos/key_logo-removebg-preview.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="130.0" fitWidth="138.0" layoutX="103.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
