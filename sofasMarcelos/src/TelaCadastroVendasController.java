@@ -3,13 +3,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class TelaCadastroVendaController {
+public class TelaCadastroVendasController {
+
+    @FXML
+    private Button botao_comissao;
 
     @FXML
     private Button cadastro_venda;
-
-    @FXML
-    private Button calculo_comissao;
 
     @FXML
     private TextField campo_cpf_cliente;
@@ -25,11 +25,12 @@ public class TelaCadastroVendaController {
 
     @FXML
     void cadastrando(ActionEvent event) {
-
+        System.out.println("chegou aqui");
+        ManejoDB.cadastroVenda(campo_id_produto.getText(), Float.parseFloat(campo_valor_produto.getText()), campo_cpf_cliente.getText(), Integer.parseInt(campo_quantidade.getText()));
     }
 
     @FXML
-    void reestocando(ActionEvent event) {
+    void calcular_comissao(ActionEvent event) {
 
     }
 

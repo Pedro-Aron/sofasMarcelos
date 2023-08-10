@@ -50,8 +50,6 @@ public class App extends Application {
         final FXMLLoader telaCadastroCorretoXML = new FXMLLoader(getClass().getResource("telaCadastroCorreto.fxml")); 
         telaCadastroCorretoTela = new Scene(telaCadastroCorretoXML.load()); 
 
-        final FXMLLoader telaLojaInterfaceXML = new FXMLLoader(getClass().getResource("lojainterface.fxml"));
-        telaLojaInterfaceTela = new Scene(telaLojaInterfaceXML.load()); 
 
         final FXMLLoader telaCadastroVendaXML = new FXMLLoader(getClass().getResource("tela_cadastro_vendas.fxml"));
         telaCadastroVendaTela = new Scene(telaCadastroVendaXML.load()); 

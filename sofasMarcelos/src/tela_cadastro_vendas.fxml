@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastroVendaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastroVendasController">
    <left>
       <AnchorPane prefHeight="450.0" prefWidth="303.0" style="-fx-background-color: #4B0D9C;" BorderPane.alignment="CENTER">
          <children>
@@ -36,7 +36,7 @@
             <TextField fx:id="campo_id_produto" layoutX="79.0" layoutY="43.0" prefHeight="27.0" prefWidth="190.0" promptText="ID do produto" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
             <Button fx:id="cadastro_venda" layoutX="115.0" layoutY="212.0" mnemonicParsing="false" onAction="#cadastrando" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CADASTRAR" textFill="WHITE" />
             <TextField fx:id="campo_quantidade" layoutX="78.0" layoutY="162.0" prefHeight="28.0" prefWidth="192.0" promptText="Quantidade" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="calculo_comissao" layoutX="106.0" layoutY="256.0" mnemonicParsing="false" onAction="#reestocando" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CALCULO COMISSAO" textFill="WHITE" />
+            <Button fx:id="botao_comissao" layoutX="106.0" layoutY="256.0" mnemonicParsing="false" onAction="#calcular_comissao" prefHeight="26.0" prefWidth="137.0" style="-fx-background-color: #4B0D9C; -fx-cursor: hand;" text="CALCULO COMISSAO" textFill="WHITE" />
             <TextField fx:id="campo_valor_produto" layoutX="79.0" layoutY="82.0" prefHeight="27.0" prefWidth="190.0" promptText="Valor" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="campo_cpf_cliente" layoutX="79.0" layoutY="117.0" prefHeight="27.0" prefWidth="190.0" promptText="CPF do cliente" style="-fx-background-color: transparent; -fx-border-color: #4B0D9C; -fx-border-width: 0px 0px 2px 0px;" />
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="40.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">

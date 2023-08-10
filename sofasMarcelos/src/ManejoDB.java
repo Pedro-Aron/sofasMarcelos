@@ -132,4 +132,26 @@ public class ManejoDB {
             return false;
         }
     }
+
+    public static boolean cadastroVenda(String idProduto, Float valor, String cpfCliente, Integer quantidade) {
+        
+        try {
+            String sql = "INSERT INTO venda (id_vendedor, cpf_vendedor, cpf_cliente, id_produto, preco, quantidade) values (?, ?, ?, ?, ?, ?)";
+            PreparedStatement comando = conexao.prepareStatement(sql);
+            System.out.println("penis");
+            comando.setString(1, "1");
+            comando.setString(2, UsuarioSessao.cpf);
+            comando.setString(3, cpfCliente);
+            comando.setString(4, idProduto);
+            comando.setString(5, valor.toString());
+            comando.setString(6, quantidade.toString());
+            comando.execute();
+            comando.close();
+            return true;
+
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
 }
