@@ -21,12 +21,11 @@ public class TelaCadastroVendasController {
     private TextField campo_quantidade;
 
     @FXML
-    private TextField campo_valor_produto;
+    private TextField campo_nome_cliente;
 
     @FXML
     void cadastrando(ActionEvent event) {
-        System.out.println("chegou aqui");
-        ManejoDB.cadastroVenda(campo_id_produto.getText(), Float.parseFloat(campo_valor_produto.getText()), campo_cpf_cliente.getText(), Integer.parseInt(campo_quantidade.getText()));
+        ManejoDB.cadastroVenda(campo_id_produto.getText(), campo_nome_cliente.getText(), campo_cpf_cliente.getText(), Integer.parseInt(campo_quantidade.getText()));
     }
 
     @FXML

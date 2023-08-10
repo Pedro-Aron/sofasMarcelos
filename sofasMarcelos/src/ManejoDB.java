@@ -7,9 +7,9 @@ import java.util.Random;
 
 public class ManejoDB {
     private static Connection conexao;
-    static final String url = "jdbc:mysql://localhost:3306/loja_moveis"; 
+    static final String url = "jdbc:mysql://localhost:3306/sofasmarcelos"; 
     static final String user = "root"; 
-    static final String password = "123456"; 
+    static final String password = "Aerodoido365"; 
 
     public static boolean conectar( ) {
         try {
@@ -24,13 +24,13 @@ public class ManejoDB {
 
     public static boolean verificaLogin(String login, String senha) {
         try {
-            String tentativaVendedor = "SELECT * from vendedor where login = '" +login+ "' and senha = '" +senha+ "'";
+            String tentativaVendedor = "SELECT * from Vendedor where login = '" +login+ "' and senha = '" +senha+ "'";
             PreparedStatement comandoVendedor = conexao.prepareStatement(tentativaVendedor);
             ResultSet retornoVendedor = ((java.sql.Statement) comandoVendedor).executeQuery(tentativaVendedor);
 
             if (retornoVendedor.next()) {
                 UsuarioSessao.nome = retornoVendedor.getString(1);
-                UsuarioSessao.cpf = retornoVendedor.getString(1);
+                UsuarioSessao.cpf = retornoVendedor.getString(2);
                 UsuarioSessao.rg = retornoVendedor.getString(3);
                 UsuarioSessao.senha = retornoVendedor.getString(4);
                 UsuarioSessao.numero = retornoVendedor.getString(5);
@@ -93,8 +93,11 @@ public class ManejoDB {
             ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
             if (retorno.next()) {
-                if (!retorno.getString(3).equals(UsuarioSessao.cpf))
+                if (!retorno.getString(3).equals(UsuarioSessao.cpf)) {
+                    System.out.println("CPF");
                     return false;
+                }
+                   
 
                 int va = Integer.parseInt(retorno.getString("quantidade"));
                 va += quantidade;
@@ -106,8 +109,10 @@ public class ManejoDB {
                 return true;
             }
 
+            System.out.println("tchau");
             return false;
         } catch (SQLException e) {
+            System.out.println("sql");
             return false;
         }
     }
@@ -133,22 +138,43 @@ public class ManejoDB {
         }
     }
 
-    public static boolean cadastroVenda(String idProduto, Float valor, String cpfCliente, Integer quantidade) {
+    public static boolean cadastroVenda(String idProduto, String nomeCliente, String cpfCliente, Integer quantidade) {
         
         try {
-            String sql = "INSERT INTO venda (id_vendedor, cpf_vendedor, cpf_cliente, id_produto, preco, quantidade) values (?, ?, ?, ?, ?, ?)";
+            String sql = "SELECT preco, quantidade, cpf_vendedor from produto where id = '"+idProduto+"'";
             PreparedStatement comando = conexao.prepareStatement(sql);
-            System.out.println("penis");
-            comando.setString(1, "1");
-            comando.setString(2, UsuarioSessao.cpf);
-            comando.setString(3, cpfCliente);
-            comando.setString(4, idProduto);
-            comando.setString(5, valor.toString());
-            comando.setString(6, quantidade.toString());
-            comando.execute();
-            comando.close();
-            return true;
+            ResultSet recebimento = ((java.sql.Statement) comando).executeQuery(sql);
 
+            if(recebimento.next()) {
+                if(!recebimento.getString(3).equals(UsuarioSessao.cpf))
+                    return false;
+
+                Integer qtdAtual = Integer.parseInt(recebimento.getString(2));
+                if (qtdAtual < quantidade)
+                    return false;
+                qtdAtual -= quantidade;
+                sql = "UPDATE produto SET quantidade = "+qtdAtual+" where id = '"+idProduto+"'";
+                comando = conexao.prepareStatement(sql);
+                ((java.sql.Statement) comando).executeUpdate(sql);
+
+                Float valorVenda = Float.parseFloat(recebimento.getString(1)) * quantidade;
+                sql = "INSERT INTO venda (nome_cliente, cpf_cliente, cpf_vendedor, id_produto, valorFinal, idVenda, quantidade) values (?, ?, ?, ?, ?, ?, ?)";
+                Random rand = new Random();
+                Integer id = rand.nextInt(10000, 100000);
+                comando = conexao.prepareStatement(sql);
+                comando.setString(1, nomeCliente);
+                comando.setString(2, cpfCliente);
+                comando.setString(3, UsuarioSessao.cpf);
+                comando.setString(4, idProduto);
+                comando.setString(5, valorVenda.toString());
+                comando.setString(6, id.toString());
+                comando.setString(7, quantidade.toString());
+                comando.execute();
+                comando.close();
+
+                return true;
+            }
+            return false;
         } catch (SQLException e) {
             return false;
         }
