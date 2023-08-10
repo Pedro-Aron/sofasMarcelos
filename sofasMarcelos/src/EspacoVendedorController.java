@@ -1,5 +1,6 @@
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -25,17 +26,21 @@ public class EspacoVendedorController {
 
     @FXML
     void cadastrar_vendedor(MouseEvent event) {
-
+        App.change_scene("tela cadastro");
     }
 
     @FXML
     void consultar_cliente(MouseEvent event) {
-
+        App.change_scene("tela cadastro vendas");
     }
 
     @FXML
     void consultar_estoque(MouseEvent event) {
 
+    }
+        @FXML
+    void volta_tela_login(ActionEvent event) {
+        App.change_scene("tela login");
     }
 
 }

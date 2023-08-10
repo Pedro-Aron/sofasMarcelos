@@ -42,4 +42,9 @@ public class TelaProdutosController {
             System.out.println("Verifique a tentativa de cadastro novamente");
     }
 
+    @FXML
+    void voltarTelaLoginAPartirTelaCadastroProduto(ActionEvent event) {
+        App.change_scene("tela espaco vendedor");
+    }
+
 }
