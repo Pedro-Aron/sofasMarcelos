@@ -194,4 +194,27 @@ public class ManejoDB {
         }
     }
 
+    public static Float calculaComissoes() {
+        String sql = "SELECT valorFinal from venda where cpf_vendedor = '"+UsuarioSessao.cpf+"'";
+        
+        try {
+            PreparedStatement comando = conexao.prepareStatement(sql);
+            ResultSet resultado = ((java.sql.Statement) comando).executeQuery(sql);
+
+            Float soma = 0.0f;
+            while (resultado.next())
+                soma += Float.parseFloat(resultado.getString(1)) * 0.01f;
+
+            sql = "UPDATE vendedor SET comissoes = "+soma+" where cpf = '"+UsuarioSessao.cpf+"'";
+            comando = conexao.prepareStatement(sql);
+            ((java.sql.Statement) comando).executeUpdate(sql);
+
+            return soma;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return 0.0f;
+        }
+
+    }
+
 }
