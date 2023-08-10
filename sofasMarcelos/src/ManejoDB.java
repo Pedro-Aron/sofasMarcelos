@@ -93,7 +93,7 @@ public class ManejoDB {
             ResultSet retorno = ((java.sql.Statement) comando).executeQuery(sql);
 
             if (retorno.next()) {
-                if (!retorno.getString(3).equals(UsuarioSessao.cpf)) {
+                if (!retorno.getString(2).equals(UsuarioSessao.cpf)) {
                     System.out.println("CPF");
                     return false;
                 }
