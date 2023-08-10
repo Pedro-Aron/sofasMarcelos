@@ -36,7 +36,7 @@ public class EspacoVendedorController {
 
     @FXML
     void consultar_estoque(MouseEvent event) {
-
+        App.change_scene("tela tabela estoque");
     }
         @FXML
     void volta_tela_login(ActionEvent event) {

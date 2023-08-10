@@ -13,6 +13,7 @@ public class App extends Application {
     private static Scene telaEspacoVendedorTela;
     private static Scene telaCadastroProdutosTela;
     private static Scene telaCadastroVendaTela;
+    private static Scene telaTabelaEstoqueTela;
 
     private static Stage stage; 
     public static void main(String[] args) throws Exception {
@@ -28,6 +29,9 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage; 
+
+        final FXMLLoader telaTabelaEstoqueXml = new FXMLLoader(getClass().getResource("tela_tabela_estoque.fxml"));
+        telaTabelaEstoqueTela = new Scene(telaTabelaEstoqueXml.load());
 
         final FXMLLoader telaCadastroProdutoXml = new FXMLLoader(getClass().getResource("tela_produtos.fxml"));
         telaCadastroProdutosTela = new Scene(telaCadastroProdutoXml.load());
@@ -87,6 +91,9 @@ public class App extends Application {
                 break;
             case "tela cadastro vendas":
                 stage.setScene(telaCadastroVendaTela);
+                break;
+            case "tela tabela estoque":
+                stage.setScene(telaTabelaEstoqueTela);
                 break;
         }
     }

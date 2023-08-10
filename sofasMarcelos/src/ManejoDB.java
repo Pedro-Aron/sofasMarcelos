@@ -180,4 +180,18 @@ public class ManejoDB {
         }
     }
 
+    public static ResultSet resgataProdutos() {
+        String sql = "SELECT * from produto";
+
+        try {
+            PreparedStatement comando = conexao.prepareStatement(sql);
+            ResultSet resultado = ((java.sql.Statement) comando).executeQuery(sql);
+
+            return resultado;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
 }
